@@ -15,7 +15,7 @@ def get_dataset_in_np(dataset_path):
 
 			dataset.append(line)
 
-	dataset_test = np.array(dataset[1:], dtype='float')
+	dataset = np.array(dataset[1:], dtype='float')
 	return dataset
 
 def normalize(dataset):	# TODO
@@ -27,7 +27,9 @@ def normalize(dataset):	# TODO
 		max_values.append(max(dataset[:, i]))
 
 	
-	# for i in range(0, dataset.shape[0]):
+	# for i in range(0, dataset.ls
+	# ls
+	# shape[0]):
 		# for j in range(0, dataset.shape[1]):
 			# dataset[i, j] = (dataset[i, j] - min_values[j]) / (max_values[j] - min_values[j])
 
@@ -55,17 +57,17 @@ y = tf.placeholder(tf.float32)
 
 # define the weights with respective shapes
 weights = {
-	'w1': tf.Variable(tf.random_normal([DIM_INPUT, 128]))
-	'w2': tf.Variable(tf.random_normal([128, 256]))
-	'w3': tf.Variable(tf.random_normal([256, 512]))
+	'w1': tf.Variable(tf.random_normal([DIM_INPUT, 128])),
+	'w2': tf.Variable(tf.random_normal([128, 256])),
+	'w3': tf.Variable(tf.random_normal([256, 512])),
 	'w4': tf.Variable(tf.random_normal([512, DIM_OUTPUT]))
 }
 
 # define the biases with respective shapes
 biases = {
-	'b1': tf.Variable(tf.random_normal([128]))
-	'b2': tf.Variable(tf.random_normal([256]))
-	'b3': tf.Variable(tf.random_normal([512]))
+	'b1': tf.Variable(tf.random_normal([128])),
+	'b2': tf.Variable(tf.random_normal([256])),
+	'b3': tf.Variable(tf.random_normal([512])),
 	'b4': tf.Variable(tf.random_normal([DIM_OUTPUT]))
 }
 
